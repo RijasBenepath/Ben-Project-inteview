@@ -1,0 +1,21 @@
+@import "root";
+@import "header";
+@import "hero";
+@import "services";
+@import "team";
+@import "work";
+@import "contacts";
+
+
+
+
+.navigation {
+    nav {
+        ul {
+            display: grid;
+            grid-template-columns: 25%;
+
+        }
+    }
+
+}

@@ -1,0 +1,95 @@
+$red: #b24a50;
+$darkred: #c8535a;
+
+.servicesSection {
+
+    height: 100%;
+    width: 100%;
+    background-color: $red;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        text-emphasis: none;
+        position: absolute;
+        background: url(../images/servicesLayer.png) no-repeat top center;
+        background-attachment: fixed;
+        background-size: cover;
+        z-index: 1;
+        left: 0;
+        top: 0;
+    }
+
+    * {
+        z-index: 2;
+    }
+
+    h2 {
+        color: #FFF;
+        font-size: 60pt;
+        font-weight: lighter;
+
+        @include mdmax {
+            font-size: 30px;
+        }
+    }
+
+    .subtitle {
+        font-size: 20px;
+        text-transform: uppercase;
+
+        @include mdmax {
+            font-size: 16px;
+        }
+
+        span {
+            color: #ec9da2;
+            ;
+        }
+    }
+
+    .items {
+
+        margin-top: 5vh;
+
+        .item {
+            @include bg-opacity($darkred,
+                0.6);
+            padding: 5vh 2vw;
+        }
+
+        i.fa {
+            color: $red;
+            background-color: #FFF;
+            font-size: 100px;
+            padding: 25px;
+            width: 160px;
+            height: 160px;
+            border-radius: 100%;
+            border: 5px solid $red;
+            box-shadow: 0px 0px 0px 5px #FFF;
+            text-align: center;
+            margin-bottom: 20px;
+
+            @include mdmax {
+                font-size: 46px;
+                width: 80px;
+                height: 80px;
+                padding: 10px;
+            }
+        }
+
+        h4 {
+            text-transform: uppercase;
+            font-size: 3ex;
+        }
+    }
+
+}

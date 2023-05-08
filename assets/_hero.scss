@@ -1,0 +1,103 @@
+$blue: #74c7d5;
+
+#heroSection {
+    height: 100vh;
+    position: relative;
+
+    .heroSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        .hero {
+
+            display: flex;
+            height: 60%;
+            justify-content: center;
+            align-items: center;
+            justify-content: stretch;
+            width: 100%;
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
+            max-width: 830px;
+
+            @include mdmax {
+                display: block;
+                height: auto;
+            }
+
+            @include mdmax {
+                max-width: 100%;
+            }
+
+            &:after {
+                content: "";
+                background-color: #FFF;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0.3;
+                z-index: 1;
+                border-radius: 5px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .tagline {
+                z-index: 1;
+                color: $blue;
+                font-size: 60px;
+                font-weight: lighter;
+                white-space: nowrap;
+                text-align: right;
+                line-height: 60px;
+
+                @include mdmax {
+                    font-size: 20px;
+                    z-index: 1;
+                    position: relative;
+                    line-height: normal;
+                }
+            }
+
+            .headline {
+                top: 0;
+                right: 0;
+                font-size: 138px;
+                // transform: translateX(0%, 70%);
+                color: $blue;
+                z-index: 2;
+                font-weight: bolder;
+
+                @include mdmax {
+                    font-size: 40px;
+                    position: relative;
+                    line-height: normal;
+                    text-align: right;
+                    margin: 0;
+                }
+
+            }
+        }
+    }
+}
+
+
+.sliderbg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url(../images/hero-1.jpg) no-repeat top center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}

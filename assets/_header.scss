@@ -1,0 +1,116 @@
+$blue: #75b4aa;
+$darkpurple: #4c3f4b;
+$lightpurple: #a1859e;
+$red: #b24a50;
+$darkred: #c8535a;
+$green: #81a256;
+
+.headerSection {
+    font-family: 'Lato';
+    color: #FFF;
+    align-content: center;
+    height: 10vh;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(44, 62, 80, 0), rgb(44, 62, 80));
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+
+
+
+    .navbar-brand {
+        color: #FFF;
+        font-size: 5em;
+        font-family: 'Damion', cursive;
+        opacity: 0;
+        padding-top: 0;
+        line-height: normal;
+
+        @include mdmax {
+            font-size: 3em;
+        }
+
+
+    }
+
+    .hamburger-menu {
+        display: none;
+
+        @include mdmax {
+            display: inline;
+            text-align: right;
+            display: block;
+            float: right;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    }
+
+    .navigation {
+        @include mdmax {
+            display: none;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        font-size: 18px !important;
+        font-size: 18em;
+
+        li {
+            opacity: 0;
+
+            a {
+                line-height: 90px;
+                color: #FFF;
+                padding: 40px 25px 10px;
+                border-radius: 0px 0 5px 5px;
+
+                &:hover,
+                &.active {
+                    background-color: #74c7d5;
+                    text-decoration: none;
+                }
+
+                &.home {
+                    &.active {
+                        background-color: $red;
+                    }
+                }
+
+                &.services {
+                    &.active {
+                        background-color: $red;
+                    }
+                }
+
+                &.about {
+                    &.active {
+                        background-color: $darkpurple;
+                    }
+                }
+
+                &.work {
+                    &.active {
+                        background-color: $green;
+                    }
+
+                }
+
+                &.contacts {
+                    &.active {
+                        background-color: $blue;
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+}
